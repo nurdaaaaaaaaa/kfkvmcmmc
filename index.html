@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .first-row p{
+      color: #6f6d72;
+      font-family: sans-serif;
+    }
+    body{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .first-row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 708px;
+    }
+    .first-row h1{
+      font-size: 50px;
+      font-weight: bolder;
+    }
+    .menu-list{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .gaming{
+      width: 730px;
+      height: 300px;
+    }
+    .menu-list p:hover{
+      cursor: pointer;
+      color: #e75d50;
+    }
+    .container{
+      width: 1115px;
+      height: 810px;
+      background-color: white;
+      position: relative;
+    }
+    .game h1{
+      font-family: sans-serif;
+      max-width: 300px;
+      font-size: 50px;
+    }
+    .game-text{
+      display: flex;
+      flex-direction: row;
+      max-width: 730px;
+      gap: 100px;
+    }
+    .row2{
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      margin-left: -19px;
+    }
+    .button1{
+      background-color: #ff6666;
+      width: 185px;
+      height: 48px;
+      color: #320e21;
+      text-align: center;
+      align-items: center;
+      border: none;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+    .button1:hover{
+      color: #fff;
+      background-color: #000;
+      cursor: pointer;
+    }
+    .row2 p{
+      max-width: 330px;
+      font-family: sans-serif;
+      color: #6f6d72;
+    }
+    .black{
+      display: flex;
+      flex-direction: column;
+      background-color: #00001a;
+      width: 350px;
+      height: 510px;
+      position: absolute;
+      top: 125px;
+      right: 0px;
+      font-family: sans-serif;
+    }
+    .black h1{
+      color: #ff9966;
+      max-width: 330px;
+      padding-left: 10px;
+    }
+    .one-row h2{
+      color: white;
+      max-width: 330px;
+      padding-left: 10px;
+    }
+    .one-row p{
+      color: #6f6d72;
+      max-width: 330px;
+      padding-left: 10px;
+    }
+    .one-row hr{
+      width: 90%;
+      padding-left: 10px;
+    }
+    .object{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      font-family: sans-serif;
+    }
+    .icons{
+      width: 100px;
+      height: 130px;
+    }
+    .object-text{
+      margin-top: -25px;
+      max-width: 225px;
+    }
+    .object-text h1{
+      color: #e75d50;
+    }
+    .object-text h3{
+      color: black;
+    }
+    .object-text h3:hover{
+      color: #e75d50;
+      cursor: pointer;
+    }
+    .last{
+      display: flex;
+      flex-direction: row;
+      gap: 38px;
+    }
+    .one-row h2:hover{
+      color: #ff9966;
+      cursor: pointer;
+    }
+    .menu{
+      visibility: hidden;
+    }
+    @media screen and (max-width: 430px){
+      .container{
+        display: flex;
+        flex-direction: column;
+        height: 2000px;
+      }
+      .menu-list{
+        display: none;
+      }
+      .first-row{
+        display: flex;
+        flex-direction: column;
+      }
+      .gaming{
+        width: 375px;
+        height: 375px;
+        object-fit: cover;
+        padding-left: 15px;
+        padding-top: 120px;
+      }
+      .game-text{
+        flex-direction: column;
+        position: absolute;
+        left: 15px
+      }
+      .last{
+        flex-direction: column;
+        padding-left: 15px;
+        padding-top: 1050px;
+      }
+      .black{
+      display: flex;
+      flex-direction: column;
+      background-color: #00001a;
+      width: 350px;
+      height: 510px;
+      position: absolute;
+      top: 1000px;
+      left: 15px;
+      font-family: sans-serif;
+    }
+    .game-text{
+      gap: 0;
+    }
+    .first-row h1{
+      position: absolute;
+      left: 15px;
+    }
+    .row2{
+      display: flex;
+      flex-direction: column;
+      padding-top: 0px;
+      margin-left: 0px;
+    }
+    .menu{
+      visibility: visible;
+      width: 40px;
+      height: 40px;
+      z-index: 2;
+      position: absolute;
+      right: 40px;
+    }
+    .first-row{
+      display: flex;
+      flex-direction: row;
+      padding-top: 50px;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="first-row">
+      <h1><strong>W.</strong></h1>
+      <div class="menu-list">
+      <p>Home</p>
+      <p>New</p>
+      <p>Popular</p>
+      <p>Trending</p>
+      <p>Categories</p>
+      </div>
+      <img class="menu" src="icon-menu-close.svg" alt="photo">
+    </div>
+    <div class="game">
+      <img class="gaming" src="image-web-3-desktop.jpg" alt="photo">
+      <div class="game-text">
+        <div class="row1">
+          <h1>The Bright Future of Web 3.0?</h1>
+        </div>
+        <div class="row2">
+          <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?
+          </p>
+          <button class="button1">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="black">
+      <h1>New</h1>
+      <div class="one-row">
+        <h2>  Hydrogen VS Electric Cars</h2>
+      <p>Will hydrogen-fueled cars ever catch up to EVs?</p><hr>
+      </div>
+
+      <div class="one-row">
+        <h2>  The Downsides of AI Artistry
+        </h2>
+      <p> What are the possible adverse effects of on-demand AI image generation?
+      </p><hr>
+      </div>
+
+      <div class="one-row">
+        <h2>    Is VC Funding Drying Up?
+        </h2>
+      <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.
+      </p>
+      </div>
+    </div>
+    <div class="last">
+      <div class="object">
+        <img class="icons" src="image-retro-pcs.jpg" alt="photo">
+        <div class="object-text">
+          <h1>01</h1>
+          <h3>Reviving Retro PCs</h3>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+
+      <div class="object">
+        <img class="icons" src="image-top-laptops.jpg" alt="photo">
+        <div class="object-text">
+          <h1>02</h1>
+          <h3>Top 10 Laptops of 2022</h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+
+      <div class="object">
+        <img class="icons" src="image-gaming-growth.jpg" alt="photo">
+        <div class="object-text">
+          <h1>03</h1>
+          <h3>The Growth of Gaming</h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
